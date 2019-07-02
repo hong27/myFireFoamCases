@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : dev-940e28f63681
+Exec   : blockMesh
+Date   : Jul 01 2019
+Time   : 22:05:27
+Host   : "jianhong-ThinkPad-T460p"
+PID    : 7874
+I/O    : uncollated
+Case   : /home/jianhong/OpenFOAM/jianhong-dev/run/firefoamcases/ofFireFoamCase/LES/smallPoolFire3D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/home/jianhong/OpenFOAM/jianhong-dev/run/firefoamcases/ofFireFoamCase/LES/smallPoolFire3D/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0166667 .. 0.0166667
+        j : 0.0166667 .. 0.0166667
+        k : 0.0166667 .. 0.0166667
+
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-0.5 0 -0.5) (0.5 1 0.5)
+  nPoints: 226981
+  nCells: 216000
+  nFaces: 658800
+  nInternalFaces: 637200
+----------------
+Patches
+----------------
+  patch 0 (start: 637200 size: 3600) name: base
+  patch 1 (start: 640800 size: 3600) name: outlet
+  patch 2 (start: 644400 size: 14400) name: sides
+
+End
+

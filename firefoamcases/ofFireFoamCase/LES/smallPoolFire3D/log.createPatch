@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : dev-940e28f63681
+Exec   : createPatch -overwrite
+Date   : Jul 01 2019
+Time   : 22:05:28
+Host   : "jianhong-ThinkPad-T460p"
+PID    : 7876
+I/O    : uncollated
+Case   : /home/jianhong/OpenFOAM/jianhong-dev/run/firefoamcases/ofFireFoamCase/LES/smallPoolFire3D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading createPatchDict
+
+Adding new patch inlet as patch 3 from 
+{
+    type            patch;
+}
+
+
+Read 144 faces from faceSet f0
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+No patches removed.
+Writing repatched mesh to 0
+
+End
+

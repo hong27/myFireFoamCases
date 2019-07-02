@@ -1,0 +1,35 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : dev-940e28f63681
+Exec   : topoSet
+Date   : Jul 01 2019
+Time   : 22:05:27
+Host   : "jianhong-ThinkPad-T460p"
+PID    : 7875
+I/O    : uncollated
+Case   : /home/jianhong/OpenFOAM/jianhong-dev/run/firefoamcases/ofFireFoamCase/LES/smallPoolFire3D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created faceSet f0
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((-0.1 -0.001 -0.1) (0.1 0.005 0.1))
+    faceSet f0 now size 144
+End
+

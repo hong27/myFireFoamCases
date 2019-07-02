@@ -1,0 +1,1243 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev-tmp                               |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : dev-tmp-0c4175bec707
+Exec   : fireFoam
+Date   : Aug 28 2017
+Time   : 16:35:25
+Host   : "master"
+PID    : 21080
+I/O    : uncollated
+Case   : /shares/meredithk/fireFoam-dev-tmp/fireFoam/cases/steckler
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FireFOAM Build Version:  d773a7a97b35edb3f0f0b78bd30550cf9284da6a
+FireFOAM Build Time Stamp:  Mon Aug 28 16:14:33 EDT 2017
+****************************************************
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: Operating solver in PISO mode
+
+Creating combustion model
+
+Selecting combustion model eddyDissipationModel<psiThermoCombustion,gasHThermoPhysics>
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         singleStepReactingMixture;
+    transport       sutherland;
+    thermo          janaf;
+    energy          sensibleEnthalpy;
+    equationOfState perfectGas;
+    specie          specie;
+}
+
+Selecting chemistryReader foamChemistryReader
+    elements not defined in "/shares/meredithk/fireFoam-dev-tmp/fireFoam/cases/steckler/constant/reactions"
+Fuel heat of combustion :46357151
+stoichiometric air-fuel ratio :15.571544
+stoichiometric oxygen-fuel ratio :3.6282945
+Maximum products mass concentrations:
+    H2O: 0.098613587
+    CO2: 0.18067909
+    N2: 0.72070733
+Combustion mode: explicit
+Reading thermophysical properties
+
+Creating component thermo properties:
+    multi-component carrier - 5 species
+    liquids - 1 components
+    solids - 0 components
+Creating field rho
+
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+No MRF models present
+
+Creating turbulence model
+
+Selecting turbulence model type LES
+Selecting LES turbulence model kEqn
+Selecting LES delta type cubeRootVol
+kEqnCoeffs
+{
+    C               0.03;
+    Prt             1;
+    Ce              1.048;
+    Ck              0.094;
+}
+
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+
+Reading pRef
+DICPCG:  Solving for ph_rgh, Initial residual = 1, Final residual = 0.0080439052, No Iterations 29
+Hydrostatic pressure variation of internalField (gMax-gMin): 0.0055713256
+DICPCG:  Solving for ph_rgh, Initial residual = 0.0010688694, Final residual = 9.4376262e-06, No Iterations 32
+Hydrostatic pressure variation of internalField (gMax-gMin): 0.0055486376
+DICPCG:  Solving for ph_rgh, Initial residual = 9.4390676e-06, Final residual = 9.6501e-07, No Iterations 7
+Hydrostatic pressure variation of internalField (gMax-gMin): 0.0055484741
+DICPCG:  Solving for ph_rgh, Initial residual = 9.6507488e-07, Final residual = 9.6507488e-07, No Iterations 0
+Hydrostatic pressure variation of internalField (gMax-gMin): 0.0055484741
+DICPCG:  Solving for ph_rgh, Initial residual = 9.6507488e-07, Final residual = 9.6507488e-07, No Iterations 0
+Hydrostatic pressure variation of internalField (gMax-gMin): 0.0055484741
+Creating field dpdt
+
+Creating field kinetic energy K
+
+stoichiometric mixture fraction is = 0.060344407
+
+Constructing reacting cloud
+Constructing particle injection models
+Creating injector: coneInjection
+Selecting injection model coneInjection
+    Constructing 3-D injection
+Selecting distribution model uniform
+
+Constructing surface film model
+Selecting surfaceFilmModel none
+    Selecting region model functions
+    none
+Creating pyrolysis model
+Selecting pyrolysisModel none
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constRadFractionEmission
+Selecting scatterModel constantScatter
+fvDOM : Allocated 32 rays with average orientation:
+	I0 : omega : 	0.2300378
+	I1 : omega : 	0.2300378
+	I2 : omega : 	0.2300378
+	I3 : omega : 	0.2300378
+	I4 : omega : 	0.2300378
+	I5 : omega : 	0.2300378
+	I6 : omega : 	0.2300378
+	I7 : omega : 	0.2300378
+	I8 : omega : 	0.55536037
+	I9 : omega : 	0.55536037
+	I10 : omega : 	0.55536037
+	I11 : omega : 	0.55536037
+	I12 : omega : 	0.55536037
+	I13 : omega : 	0.55536037
+	I14 : omega : 	0.55536037
+	I15 : omega : 	0.55536037
+	I16 : omega : 	0.55536037
+	I17 : omega : 	0.55536037
+	I18 : omega : 	0.55536037
+	I19 : omega : 	0.55536037
+	I20 : omega : 	0.55536037
+	I21 : omega : 	0.55536037
+	I22 : omega : 	0.55536037
+	I23 : omega : 	0.55536037
+	I24 : omega : 	0.2300378
+	I25 : omega : 	0.2300378
+	I26 : omega : 	0.2300378
+	I27 : omega : 	0.2300378
+	I28 : omega : 	0.2300378
+	I29 : omega : 	0.2300378
+	I30 : omega : 	0.2300378
+	I31 : omega : 	0.2300378
+
+No finite volume options present
+
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+
+
+Courant Number mean: 0 max: 0
+deltaT = 0.066666667
+Time = 0.0666667
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 6.871214e-07, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 6.1654536e-07, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 6.941718e-07, No Iterations 1
+smoothSolver:  Solving for O2, Initial residual = 0.99999577, Final residual = 3.0136655e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for C3H8, Initial residual = 0.9999975, Final residual = 6.3472597e-13, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 0, Final residual = 0, No Iterations 0
+      O2	min/ave/max  =	     0.23301	     0.23301	     0.23301
+     H2O	min/ave/max  =	           0	           0	           0
+    C3H8	min/ave/max  =	 2.4604e-166	  3.1397e-18	  7.0569e-15
+     CO2	min/ave/max  =	           0	           0	           0
+      N2	min/ave/max  =	     0.76699	     0.76699	     0.76699
+Radiation solver iter: 0
+Radiant Fraction is 0.22
+GAMG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 7.545e-16, No Iterations 1
+GAMG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 7.7124e-16, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 5.217e-05, No Iterations 1
+GAMG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 4.3619e-05, No Iterations 1
+GAMG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 5.4587e-05, No Iterations 1
+GAMG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 8.2257e-05, No Iterations 1
+GAMG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 5.4028e-06, No Iterations 2
+GAMG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 7.8423e-05, No Iterations 1
+GAMG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 8.739e-16, No Iterations 1
+GAMG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 9.9835e-16, No Iterations 1
+GAMG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 8.049e-06, No Iterations 2
+GAMG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 7.652e-06, No Iterations 2
+GAMG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.3077e-06, No Iterations 2
+GAMG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 4.3627e-06, No Iterations 2
+GAMG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 2.8648e-05, No Iterations 2
+GAMG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 4.8277e-06, No Iterations 2
+GAMG:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 4.9569e-05, No Iterations 2
+GAMG:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 1.2842e-05, No Iterations 3
+GAMG:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 2.7609e-05, No Iterations 2
+GAMG:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 7.5106e-05, No Iterations 1
+GAMG:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 8.7771e-16, No Iterations 1
+GAMG:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 9.492e-16, No Iterations 1
+GAMG:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 5.0287e-06, No Iterations 2
+GAMG:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 1.6201e-05, No Iterations 2
+GAMG:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 1.2829e-05, No Iterations 2
+GAMG:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 2.0944e-05, No Iterations 2
+GAMG:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 6.8514e-06, No Iterations 2
+GAMG:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 2.0295e-05, No Iterations 1
+GAMG:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 8.0188e-16, No Iterations 1
+GAMG:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 9.0054e-16, No Iterations 1
+GAMG:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 5.8115e-05, No Iterations 1
+GAMG:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 6.3864e-06, No Iterations 2
+smoothSolver:  Solving for h, Initial residual = 1, Final residual = 6.5274e-13, No Iterations 2
+min/max(T) = 298.15, 300.49
+DICPCG:  Solving for p_rgh, Initial residual = 0.99822, Final residual = 0.0080322, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0.00047825, global = -0.00013113, cumulative = -0.00013113
+DICPCG:  Solving for p_rgh, Initial residual = 0.0052595, Final residual = 8.7647e-07, No Iterations 28
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.5653e-08, global = -4.6658e-09, cumulative = -0.00013114
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 1.8232e-12, No Iterations 3
+ExecutionTime = 0.69 s  ClockTime = 1 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 0 at location (-1.9 0.1 -1.9)
+    max(T) = 300.49 in cell 1353 at location (-1.3 0.1 -1.4)
+    min(Qdot) = 0 in cell 0 at location (-1.9 0.1 -1.9)
+    max(Qdot) = 0 in cell 0 at location (-1.9 0.1 -1.9)
+
+Courant Number mean: 0.018502 max: 0.054307
+deltaT = 0.093333
+Time = 0.16
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.41572, Final residual = 1.3447e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.53739, Final residual = 2.4742e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.4089, Final residual = 2.1378e-08, No Iterations 2
+smoothSolver:  Solving for O2, Initial residual = 0.99426, Final residual = 3.1249e-12, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.99989, Final residual = 7.4131e-13, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.96426, Final residual = 8.1618e-13, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.99994, Final residual = 7.4198e-13, No Iterations 3
+      O2	min/ave/max  =	     0.21694	       0.233	     0.23301
+     H2O	min/ave/max  =	 4.0885e-135	  1.0418e-19	   2.177e-16
+    C3H8	min/ave/max  =	 1.5042e-131	  3.6674e-16	  7.6712e-13
+     CO2	min/ave/max  =	 7.4938e-135	  1.9088e-19	  3.9888e-16
+      N2	min/ave/max  =	     0.76699	       0.767	     0.78306
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.86571, Final residual = 2.818e-09, No Iterations 2
+min/max(T) = 298.15, 300.99
+DICPCG:  Solving for p_rgh, Initial residual = 0.0028123, Final residual = 2.7041e-05, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.2213e-06, global = 5.411e-07, cumulative = -0.0001306
+DICPCG:  Solving for p_rgh, Initial residual = 7.5888e-05, Final residual = 7.1643e-07, No Iterations 22
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.4063e-07, global = -5.9939e-09, cumulative = -0.0001306
+smoothSolver:  Solving for k, Initial residual = 0.75499, Final residual = 1.7952e-09, No Iterations 3
+ExecutionTime = 0.88 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 2081 at location (0.3 1.9 -1.1)
+    max(T) = 300.99 in cell 1683 at location (-1.3 2.2 -1.3)
+    min(Qdot) = 2.8279e-159 in cell 420 at location (-1.9 2.9 -1.9)
+    max(Qdot) = 8.3957e-08 in cell 4059 at location (-0.1 0.1 -0.1)
+
+Courant Number mean: 0.060471 max: 0.15114
+deltaT = 0.093333
+Time = 0.253333
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.20316, Final residual = 2.4141e-07, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.3162, Final residual = 4.8642e-07, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.21403, Final residual = 3.6058e-07, No Iterations 2
+smoothSolver:  Solving for O2, Initial residual = 0.20106, Final residual = 2.2367e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0.96842, Final residual = 2.512e-13, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 1, Final residual = 2.7357e-13, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.96842, Final residual = 2.5119e-13, No Iterations 3
+      O2	min/ave/max  =	     0.20198	     0.23299	     0.23301
+     H2O	min/ave/max  =	 1.8066e-126	  1.2887e-17	   2.518e-14
+    C3H8	min/ave/max  =	 1.8429e-116	  3.3115e-05	    0.069134
+     CO2	min/ave/max  =	 3.3102e-126	  2.3611e-17	  4.6135e-14
+      N2	min/ave/max  =	     0.72889	     0.76697	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.094568, Final residual = 1.7607e-11, No Iterations 3
+min/max(T) = 298.15, 301.48
+DICPCG:  Solving for p_rgh, Initial residual = 0.0060319, Final residual = 5.7035e-05, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1004e-05, global = 5.8253e-07, cumulative = -0.00013002
+DICPCG:  Solving for p_rgh, Initial residual = 0.00028245, Final residual = 6.6844e-07, No Iterations 26
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2825e-07, global = 8.9483e-09, cumulative = -0.00013001
+smoothSolver:  Solving for k, Initial residual = 0.47169, Final residual = 6.8888e-11, No Iterations 4
+ExecutionTime = 1.07 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4508 at location (-0.3 0.1 0.1)
+    max(T) = 301.48 in cell 1683 at location (-1.3 2.2 -1.3)
+    min(Qdot) = 1.9007e-124 in cell 420 at location (-1.9 2.9 -1.9)
+    max(Qdot) = 9.6143e-06 in cell 4060 at location (0.1 0.1 -0.1)
+
+Courant Number mean: 0.094372 max: 0.23167
+deltaT = 0.093333
+Time = 0.346667
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.14113, Final residual = 9.7245e-07, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.22278, Final residual = 8.3181e-09, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.14783, Final residual = 7.5401e-09, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.13227, Final residual = 6.8878e-10, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 1, Final residual = 3.3344e-09, No Iterations 2
+smoothSolver:  Solving for C3H8, Initial residual = 0.18932, Final residual = 6.4635e-10, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 1, Final residual = 3.3344e-09, No Iterations 2
+      O2	min/ave/max  =	     0.18418	     0.23299	     0.23301
+     H2O	min/ave/max  =	 1.7336e-113	  9.5936e-07	   0.0018912
+    C3H8	min/ave/max  =	 6.5504e-112	  6.3437e-05	     0.13078
+     CO2	min/ave/max  =	  3.177e-113	  1.7577e-06	    0.003465
+      N2	min/ave/max  =	     0.67969	     0.76695	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.93045, Final residual = 7.4159e-09, No Iterations 2
+min/max(T) = 298.15, 329.05
+DICPCG:  Solving for p_rgh, Initial residual = 0.01093, Final residual = 6.6145e-05, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2593e-05, global = 1.1381e-06, cumulative = -0.00012887
+DICPCG:  Solving for p_rgh, Initial residual = 0.00036153, Final residual = 8.9056e-07, No Iterations 24
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.6578e-07, global = -1.23e-08, cumulative = -0.00012889
+smoothSolver:  Solving for k, Initial residual = 0.3518, Final residual = 4.9811e-10, No Iterations 4
+ExecutionTime = 1.25 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4987 at location (-0.5 0.3 0.3)
+    max(T) = 329.05 in cell 4060 at location (0.1 0.1 -0.1)
+    min(Qdot) = 2.7765e-109 in cell 420 at location (-1.9 2.9 -1.9)
+    max(Qdot) = 7.446e+05 in cell 4060 at location (0.1 0.1 -0.1)
+
+Courant Number mean: 0.12895 max: 0.31057
+deltaT = 0.093333
+Time = 0.44
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.12327, Final residual = 2.0764e-08, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.17012, Final residual = 3.7811e-08, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.11929, Final residual = 3.391e-08, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.10725, Final residual = 7.336e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0.20172, Final residual = 6.7861e-13, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.13011, Final residual = 9.2986e-09, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 0.20172, Final residual = 6.7862e-13, No Iterations 3
+      O2	min/ave/max  =	     0.16753	     0.23297	     0.23301
+     H2O	min/ave/max  =	           0	  1.9614e-06	   0.0032625
+    C3H8	min/ave/max  =	           0	  0.00010391	     0.19266
+     CO2	min/ave/max  =	           0	  3.5937e-06	   0.0059775
+      N2	min/ave/max  =	     0.63057	     0.76692	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.20474, Final residual = 1.6044e-11, No Iterations 3
+min/max(T) = 298.15, 348.87
+DICPCG:  Solving for p_rgh, Initial residual = 0.0092711, Final residual = 7.3788e-05, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3526e-05, global = 1.168e-06, cumulative = -0.00012772
+DICPCG:  Solving for p_rgh, Initial residual = 0.00056949, Final residual = 6.8154e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2675e-07, global = 1.0408e-08, cumulative = -0.00012771
+smoothSolver:  Solving for k, Initial residual = 0.28984, Final residual = 2.4313e-09, No Iterations 4
+ExecutionTime = 1.44 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 2531 at location (0.3 1.9 -0.9)
+    max(T) = 348.87 in cell 4060 at location (0.1 0.1 -0.1)
+    min(Qdot) = 1.2346e-104 in cell 420 at location (-1.9 2.9 -1.9)
+    max(Qdot) = 5.5386e+05 in cell 4060 at location (0.1 0.1 -0.1)
+
+Courant Number mean: 0.16147 max: 0.38647
+deltaT = 0.093333
+Time = 0.533333
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.084764, Final residual = 6.0541e-08, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.13677, Final residual = 1.1468e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.088021, Final residual = 9.6483e-08, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.075516, Final residual = 2.6211e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0.14349, Final residual = 2.6563e-09, No Iterations 2
+smoothSolver:  Solving for C3H8, Initial residual = 0.082179, Final residual = 2.4642e-09, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 0.14349, Final residual = 2.6564e-09, No Iterations 2
+      O2	min/ave/max  =	     0.15192	     0.23296	     0.23301
+     H2O	min/ave/max  =	  1.033e-103	  3.2973e-06	   0.0044242
+    C3H8	min/ave/max  =	 4.2402e-103	  0.00014273	     0.25205
+     CO2	min/ave/max  =	  1.893e-103	  6.0414e-06	   0.0081061
+      N2	min/ave/max  =	      0.5835	     0.76689	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.14426, Final residual = 7.4443e-09, No Iterations 2
+min/max(T) = 298.15, 363.73
+DICPCG:  Solving for p_rgh, Initial residual = 0.014736, Final residual = 8.0781e-05, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.4855e-05, global = 1.9019e-06, cumulative = -0.00012581
+DICPCG:  Solving for p_rgh, Initial residual = 0.00069601, Final residual = 9.1545e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.675e-07, global = -2.3477e-10, cumulative = -0.00012581
+smoothSolver:  Solving for k, Initial residual = 0.25126, Final residual = 8.0525e-09, No Iterations 4
+ExecutionTime = 1.62 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4986 at location (-0.7 0.3 0.3)
+    max(T) = 363.73 in cell 4060 at location (0.1 0.1 -0.1)
+    min(Qdot) = 0 in cell 421 at location (-1.7 2.9 -1.9)
+    max(Qdot) = 4.9997e+05 in cell 4060 at location (0.1 0.1 -0.1)
+
+Courant Number mean: 0.19335 max: 0.46111
+deltaT = 0.093333
+Time = 0.626667
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.073271, Final residual = 1.3776e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.11295, Final residual = 2.6947e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.074141, Final residual = 2.1918e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.060341, Final residual = 3.1005e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0.10998, Final residual = 2.7321e-09, No Iterations 2
+smoothSolver:  Solving for C3H8, Initial residual = 0.060615, Final residual = 2.4938e-09, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 0.10998, Final residual = 2.7321e-09, No Iterations 2
+      O2	min/ave/max  =	     0.13759	     0.23295	     0.23301
+     H2O	min/ave/max  =	           0	  4.9788e-06	   0.0053554
+    C3H8	min/ave/max  =	           0	  0.00018155	     0.30805
+     CO2	min/ave/max  =	           0	  9.1221e-06	   0.0098121
+      N2	min/ave/max  =	      0.5392	     0.76686	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.11063, Final residual = 8.1091e-09, No Iterations 2
+min/max(T) = 298.15, 374.15
+DICPCG:  Solving for p_rgh, Initial residual = 0.019518, Final residual = 0.00016183, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.9422e-05, global = 6.2952e-06, cumulative = -0.00011951
+DICPCG:  Solving for p_rgh, Initial residual = 0.00093967, Final residual = 9.8432e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.8008e-07, global = 3.5901e-09, cumulative = -0.00011951
+smoothSolver:  Solving for k, Initial residual = 0.22464, Final residual = 4.6324e-10, No Iterations 5
+ExecutionTime = 1.82 s  ClockTime = 2 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4985 at location (-0.9 0.3 0.3)
+    max(T) = 374.15 in cell 4060 at location (0.1 0.1 -0.1)
+    min(Qdot) = 1.2365e-95 in cell 8970 at location (-1.9 2.9 1.9)
+    max(Qdot) = 4.4328e+05 in cell 4060 at location (0.1 0.1 -0.1)
+
+Courant Number mean: 0.22405 max: 0.5331
+deltaT = 0.093333
+Time = 0.72
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.064128, Final residual = 2.6189e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.095389, Final residual = 5.3654e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.064073, Final residual = 4.1192e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.050925, Final residual = 6.6599e-09, No Iterations 2
+smoothSolver:  Solving for H2O, Initial residual = 0.091135, Final residual = 9.7268e-09, No Iterations 2
+smoothSolver:  Solving for C3H8, Initial residual = 0.047761, Final residual = 4.7134e-09, No Iterations 2
+smoothSolver:  Solving for CO2, Initial residual = 0.091135, Final residual = 9.7269e-09, No Iterations 2
+      O2	min/ave/max  =	     0.12457	     0.23293	     0.23301
+     H2O	min/ave/max  =	           0	  7.0885e-06	   0.0060881
+    C3H8	min/ave/max  =	           0	  0.00022041	     0.36013
+     CO2	min/ave/max  =	           0	  1.2987e-05	    0.011155
+      N2	min/ave/max  =	     0.49805	     0.76683	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.091514, Final residual = 7.2907e-11, No Iterations 3
+min/max(T) = 298.15, 381.26
+DICPCG:  Solving for p_rgh, Initial residual = 0.022054, Final residual = 0.00020349, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.7005e-05, global = 1.3282e-05, cumulative = -0.00010623
+DICPCG:  Solving for p_rgh, Initial residual = 0.0012351, Final residual = 9.7792e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.7941e-07, global = -1.8695e-08, cumulative = -0.00010624
+smoothSolver:  Solving for k, Initial residual = 0.20254, Final residual = 1.4647e-09, No Iterations 5
+ExecutionTime = 2.01 s  ClockTime = 3 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 5436 at location (-0.7 0.3 0.5)
+    max(T) = 381.26 in cell 4060 at location (0.1 0.1 -0.1)
+    min(Qdot) = 0 in cell 2972 at location (-1.5 1.9 -0.7)
+    max(Qdot) = 4.4686e+05 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.25338 max: 0.60528
+deltaT = 0.093333
+Time = 0.813333
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.057043, Final residual = 4.4275e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.081634, Final residual = 9.5011e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.056403, Final residual = 6.781e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.044057, Final residual = 8.0485e-11, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.075023, Final residual = 1.2135e-10, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.040581, Final residual = 4.5951e-11, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.075031, Final residual = 1.2135e-10, No Iterations 3
+      O2	min/ave/max  =	     0.11344	     0.23292	     0.23301
+     H2O	min/ave/max  =	           0	  9.5798e-06	    0.006646
+    C3H8	min/ave/max  =	           0	  0.00026027	     0.40584
+     CO2	min/ave/max  =	           0	  1.7553e-05	    0.012177
+      N2	min/ave/max  =	      0.4619	     0.76679	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.075309, Final residual = 2.1466e-10, No Iterations 3
+min/max(T) = 298.15, 394.94
+DICPCG:  Solving for p_rgh, Initial residual = 0.02174, Final residual = 0.00018086, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.3051e-05, global = 1.1137e-05, cumulative = -9.5107e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.001465, Final residual = 8.6561e-07, No Iterations 26
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.5972e-07, global = -4.8828e-09, cumulative = -9.5112e-05
+smoothSolver:  Solving for k, Initial residual = 0.18392, Final residual = 3.8366e-09, No Iterations 5
+ExecutionTime = 2.2 s  ClockTime = 3 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 5436 at location (-0.7 0.3 0.5)
+    max(T) = 394.94 in cell 4089 at location (-0.1 0.3 -0.1)
+    min(Qdot) = 0 in cell 7530 at location (-1.9 2.3 1.3)
+    max(Qdot) = 5.27e+05 in cell 4090 at location (0.1 0.3 -0.1)
+
+Courant Number mean: 0.28114 max: 0.67863
+deltaT = 0.093333
+Time = 0.906667
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.050647, Final residual = 6.8263e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.070306, Final residual = 5.4383e-08, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.05012, Final residual = 4.0711e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.038191, Final residual = 8.4661e-11, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.060728, Final residual = 9.991e-11, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.036135, Final residual = 5.1653e-11, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.060727, Final residual = 9.9907e-11, No Iterations 3
+      O2	min/ave/max  =	     0.10563	      0.2329	     0.23301
+     H2O	min/ave/max  =	           0	  1.2244e-05	   0.0075832
+    C3H8	min/ave/max  =	           0	  0.00030141	     0.43896
+     CO2	min/ave/max  =	           0	  2.2435e-05	    0.013894
+      N2	min/ave/max  =	      0.4354	     0.76676	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.060923, Final residual = 2.2082e-10, No Iterations 3
+min/max(T) = 298.15, 417.24
+DICPCG:  Solving for p_rgh, Initial residual = 0.022619, Final residual = 0.00019734, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.6221e-05, global = 1.2919e-05, cumulative = -8.2193e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.001719, Final residual = 8.2604e-07, No Iterations 26
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.5243e-07, global = -1.0504e-08, cumulative = -8.2203e-05
+smoothSolver:  Solving for k, Initial residual = 0.16943, Final residual = 9.8822e-09, No Iterations 5
+ExecutionTime = 2.38 s  ClockTime = 3 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4985 at location (-0.9 0.3 0.3)
+    max(T) = 417.24 in cell 4089 at location (-0.1 0.3 -0.1)
+    min(Qdot) = 0 in cell 3390 at location (-1.9 1.7 -0.5)
+    max(Qdot) = 4.5724e+05 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.30728 max: 0.7501
+deltaT = 0.093333
+Time = 1
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.045284, Final residual = 9.78e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.060719, Final residual = 9.6846e-08, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.044952, Final residual = 6.4352e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.03459, Final residual = 1.4742e-09, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.055606, Final residual = 1.7058e-09, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.032703, Final residual = 1.4537e-09, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.055613, Final residual = 1.7058e-09, No Iterations 3
+      O2	min/ave/max  =	    0.096612	     0.23289	     0.23301
+     H2O	min/ave/max  =	  2.3632e-88	  1.5335e-05	   0.0090479
+    C3H8	min/ave/max  =	  1.0837e-87	  0.00034124	     0.47829
+     CO2	min/ave/max  =	  4.3299e-88	  2.8098e-05	    0.016578
+      N2	min/ave/max  =	     0.40436	     0.76673	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.055778, Final residual = 1.8605e-09, No Iterations 3
+min/max(T) = 298.15, 436.35
+DICPCG:  Solving for p_rgh, Initial residual = 0.023994, Final residual = 0.00013724, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.5251e-05, global = 2.9129e-06, cumulative = -7.929e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0019089, Final residual = 7.6337e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.4086e-07, global = 1.1584e-08, cumulative = -7.9279e-05
+smoothSolver:  Solving for k, Initial residual = 0.15678, Final residual = 1.0376e-09, No Iterations 6
+ExecutionTime = 3.31 s  ClockTime = 4 s +
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 4985 at location (-0.9 0.3 0.3)
+    max(T) = 436.35 in cell 4089 at location (-0.1 0.3 -0.1)
+    min(Qdot) = 0 in cell 6570 at location (-1.9 1.9 0.9)
+    max(Qdot) = 4.4007e+05 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.33201 max: 0.81971
+deltaT = 0.1
+Time = 1.1
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.046132, Final residual = 1.1211e-07, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.05659, Final residual = 2.8189e-07, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.044696, Final residual = 1.657e-07, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.035521, Final residual = 5.1765e-09, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.059253, Final residual = 5.6712e-09, No Iterations 3
+smoothSolver:  Solving for C3H8, Initial residual = 0.031268, Final residual = 5.222e-09, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.059251, Final residual = 5.671e-09, No Iterations 3
+      O2	min/ave/max  =	    0.090636	     0.23286	     0.23301
+     H2O	min/ave/max  =	           0	  1.9562e-05	    0.010488
+    C3H8	min/ave/max  =	           0	  0.00038445	     0.50555
+     CO2	min/ave/max  =	           0	  3.5842e-05	    0.019215
+      N2	min/ave/max  =	     0.38245	      0.7667	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.05943, Final residual = 5.9397e-09, No Iterations 3
+min/max(T) = 298.15, 453.05
+DICPCG:  Solving for p_rgh, Initial residual = 0.025084, Final residual = 0.00015381, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.2314e-05, global = 3.5953e-06, cumulative = -7.5684e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0024683, Final residual = 6.9261e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.4633e-07, global = 7.0053e-09, cumulative = -7.5677e-05
+smoothSolver:  Solving for k, Initial residual = 0.15546, Final residual = 4.7622e-09, No Iterations 6
+ExecutionTime = 3.56 s  ClockTime = 5 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 5886 at location (-0.7 0.3 0.7)
+    max(T) = 453.05 in cell 4090 at location (0.1 0.3 -0.1)
+    min(Qdot) = 4.1521e-80 in cell 6270 at location (-1.9 2.9 0.7)
+    max(Qdot) = 5.3402e+05 in cell 4119 at location (-0.1 0.5 -0.1)
+
+Courant Number mean: 0.3823 max: 0.95556
+deltaT = 0.081818
+Time = 1.18182
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.03528, Final residual = 7.6992e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.040895, Final residual = 7.8826e-08, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.033771, Final residual = 4.7461e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.031664, Final residual = 7.3248e-09, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.050454, Final residual = 8.7576e-11, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.024656, Final residual = 5.8114e-09, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.05046, Final residual = 8.7574e-11, No Iterations 4
+      O2	min/ave/max  =	    0.087315	     0.23284	     0.23301
+     H2O	min/ave/max  =	           0	  2.4167e-05	    0.011547
+    C3H8	min/ave/max  =	           0	  0.00042387	     0.52064
+     CO2	min/ave/max  =	           0	  4.4281e-05	    0.021156
+      N2	min/ave/max  =	     0.37003	     0.76666	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.050583, Final residual = 8.9678e-11, No Iterations 4
+min/max(T) = 298.15, 464.67
+DICPCG:  Solving for p_rgh, Initial residual = 0.027124, Final residual = 0.00016214, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.3496e-05, global = 2.799e-06, cumulative = -7.2878e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0025251, Final residual = 9.3818e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3616e-07, global = 1.0981e-08, cumulative = -7.2867e-05
+smoothSolver:  Solving for k, Initial residual = 0.11959, Final residual = 6.8243e-10, No Iterations 6
+ExecutionTime = 3.77 s  ClockTime = 5 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 5886 at location (-0.7 0.3 0.7)
+    max(T) = 464.67 in cell 4090 at location (0.1 0.3 -0.1)
+    min(Qdot) = 0 in cell 330 at location (-1.9 2.3 -1.9)
+    max(Qdot) = 6.7835e+05 in cell 4569 at location (-0.1 0.5 0.1)
+
+Courant Number mean: 0.3294 max: 0.83038
+deltaT = 0.081818
+Time = 1.26364
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034978, Final residual = 9.8016e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.036259, Final residual = 1.0516e-07, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.03271, Final residual = 6.4479e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.03344, Final residual = 8.3119e-09, No Iterations 3
+smoothSolver:  Solving for H2O, Initial residual = 0.052797, Final residual = 8.2759e-11, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.024176, Final residual = 6.7982e-09, No Iterations 3
+smoothSolver:  Solving for CO2, Initial residual = 0.052797, Final residual = 8.2757e-11, No Iterations 4
+      O2	min/ave/max  =	    0.084625	     0.23282	     0.23301
+     H2O	min/ave/max  =	           0	  2.9903e-05	    0.012709
+    C3H8	min/ave/max  =	  2.7054e-83	  0.00046649	     0.53199
+     CO2	min/ave/max  =	           0	  5.4792e-05	    0.023286
+      N2	min/ave/max  =	     0.36045	     0.76663	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.052951, Final residual = 8.4878e-11, No Iterations 4
+min/max(T) = 298.15, 491.34
+DICPCG:  Solving for p_rgh, Initial residual = 0.025739, Final residual = 0.00015001, No Iterations 21
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.1912e-05, global = 2.4297e-06, cumulative = -7.0437e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0023321, Final residual = 8.2168e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2118e-07, global = 5.29e-09, cumulative = -7.0432e-05
+smoothSolver:  Solving for k, Initial residual = 0.11282, Final residual = 9.9625e-10, No Iterations 6
+ExecutionTime = 3.99 s  ClockTime = 5 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 5886 at location (-0.7 0.3 0.7)
+    max(T) = 491.34 in cell 4120 at location (0.1 0.5 -0.1)
+    min(Qdot) = 0 in cell 7530 at location (-1.9 2.3 1.3)
+    max(Qdot) = 6.3228e+05 in cell 4059 at location (-0.1 0.1 -0.1)
+
+Courant Number mean: 0.34501 max: 0.87708
+deltaT = 0.081818
+Time = 1.34545
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034261, Final residual = 6.1763e-08, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.033036, Final residual = 1.3486e-07, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.031369, Final residual = 8.4393e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.036368, Final residual = 7.6873e-09, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.060105, Final residual = 3.467e-10, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.023863, Final residual = 6.3097e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.060105, Final residual = 3.467e-10, No Iterations 5
+      O2	min/ave/max  =	    0.082599	     0.23279	     0.23301
+     H2O	min/ave/max  =	           0	  3.8036e-05	    0.014882
+    C3H8	min/ave/max  =	           0	  0.00051162	     0.53914
+     CO2	min/ave/max  =	           0	  6.9693e-05	    0.027266
+      N2	min/ave/max  =	     0.35406	     0.76659	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.060252, Final residual = 3.4706e-10, No Iterations 5
+min/max(T) = 298.15, 518.72
+DICPCG:  Solving for p_rgh, Initial residual = 0.031105, Final residual = 0.00029899, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.4189e-05, global = 2.4605e-06, cumulative = -6.7971e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0027812, Final residual = 5.9999e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9332e-08, global = 1.1946e-08, cumulative = -6.7959e-05
+smoothSolver:  Solving for k, Initial residual = 0.1056, Final residual = 1.7393e-09, No Iterations 6
+ExecutionTime = 4.2 s  ClockTime = 5 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 8569 at location (1.9 0.1 1.9)
+    max(T) = 518.72 in cell 4119 at location (-0.1 0.5 -0.1)
+    min(Qdot) = 1.2873e-75 in cell 3120 at location (-1.9 2.9 -0.7)
+    max(Qdot) = 8.5511e+05 in cell 4150 at location (0.1 0.7 -0.1)
+
+Courant Number mean: 0.35999 max: 0.92194
+deltaT = 0.065455
+Time = 1.41091
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.028213, Final residual = 3.465e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.023954, Final residual = 6.3341e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.024903, Final residual = 4.547e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.032739, Final residual = 2.6085e-09, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.053772, Final residual = 3.5203e-09, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.019971, Final residual = 2.0855e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.053772, Final residual = 3.5203e-09, No Iterations 4
+      O2	min/ave/max  =	    0.080927	     0.23276	     0.23301
+     H2O	min/ave/max  =	           0	  4.7462e-05	     0.01679
+    C3H8	min/ave/max  =	           0	  0.00055339	      0.5436
+     CO2	min/ave/max  =	           0	  8.6962e-05	    0.030762
+      N2	min/ave/max  =	     0.34988	     0.76655	     0.76699
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.053899, Final residual = 3.5237e-09, No Iterations 4
+min/max(T) = 298.15, 541.18
+DICPCG:  Solving for p_rgh, Initial residual = 0.031908, Final residual = 0.00027975, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.7716e-05, global = 1.4242e-06, cumulative = -6.6535e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0029142, Final residual = 6.3275e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.4238e-08, global = 6.217e-09, cumulative = -6.6529e-05
+smoothSolver:  Solving for k, Initial residual = 0.079324, Final residual = 2.9482e-09, No Iterations 5
+ExecutionTime = 4.4 s  ClockTime = 5 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 8569 at location (1.9 0.1 1.9)
+    max(T) = 541.18 in cell 4119 at location (-0.1 0.5 -0.1)
+    min(Qdot) = 0 in cell 301 at location (-1.7 2.1 -1.9)
+    max(Qdot) = 1.0859e+06 in cell 4599 at location (-0.1 0.7 0.1)
+
+Courant Number mean: 0.29736 max: 0.76461
+deltaT = 0.073636
+Time = 1.48455
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.035001, Final residual = 8.8578e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.024893, Final residual = 8.2644e-08, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.029352, Final residual = 5.917e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.039362, Final residual = 9.0457e-09, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.061818, Final residual = 4.371e-10, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.024523, Final residual = 7.2869e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.061818, Final residual = 4.371e-10, No Iterations 5
+      O2	min/ave/max  =	    0.078822	     0.23271	     0.23301
+     H2O	min/ave/max  =	           0	  6.1079e-05	    0.019386
+    C3H8	min/ave/max  =	           0	  0.00060601	     0.54858
+     CO2	min/ave/max  =	           0	  0.00011191	     0.03552
+      N2	min/ave/max  =	     0.34524	     0.76651	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.061966, Final residual = 4.3717e-10, No Iterations 5
+min/max(T) = 298.15, 585.7
+DICPCG:  Solving for p_rgh, Initial residual = 0.034223, Final residual = 0.00033646, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.2647e-05, global = 9.5551e-06, cumulative = -5.6974e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0032522, Final residual = 7.7158e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.8818e-08, global = -3.494e-10, cumulative = -5.6974e-05
+smoothSolver:  Solving for k, Initial residual = 0.082378, Final residual = 6.1342e-10, No Iterations 6
+ExecutionTime = 4.6 s  ClockTime = 6 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 585.7 in cell 4149 at location (-0.1 0.7 -0.1)
+    min(Qdot) = 0 in cell 8881 at location (-1.7 2.3 1.9)
+    max(Qdot) = 1.1936e+06 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.3458 max: 0.89799
+deltaT = 0.073636
+Time = 1.55818
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034313, Final residual = 6.2545e-08, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.024151, Final residual = 1.059e-07, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.029099, Final residual = 7.6851e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.043366, Final residual = 9.3275e-09, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.066144, Final residual = 7.1518e-10, No Iterations 6
+smoothSolver:  Solving for C3H8, Initial residual = 0.025427, Final residual = 7.9968e-09, No Iterations 5
+smoothSolver:  Solving for CO2, Initial residual = 0.06614, Final residual = 7.1519e-10, No Iterations 6
+      O2	min/ave/max  =	    0.077245	     0.23265	     0.23301
+     H2O	min/ave/max  =	           0	  8.0613e-05	    0.022767
+    C3H8	min/ave/max  =	           0	  0.00066267	     0.55065
+     CO2	min/ave/max  =	           0	   0.0001477	    0.041714
+      N2	min/ave/max  =	     0.34283	     0.76646	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.066241, Final residual = 7.1508e-10, No Iterations 6
+min/max(T) = 298.15, 623.29
+DICPCG:  Solving for p_rgh, Initial residual = 0.039635, Final residual = 0.00030001, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.8896e-05, global = 5.0523e-07, cumulative = -5.6469e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0042332, Final residual = 7.5846e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0237e-07, global = 1.8261e-08, cumulative = -5.6451e-05
+smoothSolver:  Solving for k, Initial residual = 0.0755, Final residual = 7.6705e-10, No Iterations 6
+ExecutionTime = 4.78 s  ClockTime = 6 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 623.29 in cell 4149 at location (-0.1 0.7 -0.1)
+    min(Qdot) = 0 in cell 2124 at location (2.9 2.1 -1.1)
+    max(Qdot) = 1.5368e+06 in cell 4180 at location (0.1 0.9 -0.1)
+
+Courant Number mean: 0.35729 max: 0.93546
+deltaT = 0.055227
+Time = 1.61341
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.027106, Final residual = 2.0994e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.017001, Final residual = 3.504e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.02213, Final residual = 2.6226e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.036323, Final residual = 6.9983e-09, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.0522, Final residual = 7.9461e-09, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.022005, Final residual = 6.2891e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.0522, Final residual = 7.9461e-09, No Iterations 4
+      O2	min/ave/max  =	    0.076126	     0.23259	     0.23301
+     H2O	min/ave/max  =	           0	   0.0001007	    0.025276
+    C3H8	min/ave/max  =	           0	  0.00071077	     0.55096
+     CO2	min/ave/max  =	           0	  0.00018451	     0.04631
+      N2	min/ave/max  =	     0.34195	     0.76641	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.052296, Final residual = 7.9442e-09, No Iterations 4
+min/max(T) = 298.15, 661.35
+DICPCG:  Solving for p_rgh, Initial residual = 0.046451, Final residual = 0.00035937, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.8558e-05, global = -3.3688e-06, cumulative = -5.9819e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0036489, Final residual = 6.9891e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.3664e-08, global = 4.0956e-09, cumulative = -5.9815e-05
+smoothSolver:  Solving for k, Initial residual = 0.053922, Final residual = 9.0082e-10, No Iterations 5
+ExecutionTime = 4.97 s  ClockTime = 6 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 661.35 in cell 4180 at location (0.1 0.9 -0.1)
+    min(Qdot) = 0 in cell 2153 at location (2.7 2.3 -1.1)
+    max(Qdot) = 1.6016e+06 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.2751 max: 0.72249
+deltaT = 0.064432
+Time = 1.67784
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.039045, Final residual = 9.7412e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.020034, Final residual = 8.0306e-08, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.030302, Final residual = 7.2003e-08, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.045105, Final residual = 1.0745e-09, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.062044, Final residual = 1.6663e-09, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.026195, Final residual = 8.2537e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.062038, Final residual = 1.6663e-09, No Iterations 5
+      O2	min/ave/max  =	    0.074567	     0.23251	     0.23301
+     H2O	min/ave/max  =	           0	  0.00013108	    0.028822
+    C3H8	min/ave/max  =	           0	  0.00077271	     0.55204
+     CO2	min/ave/max  =	           0	  0.00024017	    0.052807
+      N2	min/ave/max  =	     0.34044	     0.76635	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.062178, Final residual = 1.6658e-09, No Iterations 5
+min/max(T) = 298.15, 703.14
+DICPCG:  Solving for p_rgh, Initial residual = 0.04263, Final residual = 0.00030471, No Iterations 9
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.6936e-05, global = 8.5115e-06, cumulative = -5.1304e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0049167, Final residual = 8.7671e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0792e-07, global = 1.2511e-08, cumulative = -5.1291e-05
+smoothSolver:  Solving for k, Initial residual = 0.057543, Final residual = 3.8367e-09, No Iterations 5
+ExecutionTime = 5.15 s  ClockTime = 6 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 703.14 in cell 4179 at location (-0.1 0.9 -0.1)
+    min(Qdot) = 0 in cell 2155 at location (3.1 2.3 -1.1)
+    max(Qdot) = 1.6106e+06 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.33053 max: 0.87036
+deltaT = 0.064432
+Time = 1.74227
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.037144, Final residual = 1.0764e-07, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.02061, Final residual = 1.7041e-07, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.030008, Final residual = 1.1272e-07, No Iterations 4
+smoothSolver:  Solving for O2, Initial residual = 0.04683, Final residual = 9.7001e-09, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.06192, Final residual = 7.3685e-10, No Iterations 6
+smoothSolver:  Solving for C3H8, Initial residual = 0.027911, Final residual = 7.4998e-09, No Iterations 5
+smoothSolver:  Solving for CO2, Initial residual = 0.061919, Final residual = 7.3684e-10, No Iterations 6
+      O2	min/ave/max  =	    0.073609	      0.2324	     0.23301
+     H2O	min/ave/max  =	           0	  0.00017124	    0.032288
+    C3H8	min/ave/max  =	           0	  0.00083947	     0.55163
+     CO2	min/ave/max  =	           0	  0.00031375	    0.059158
+      N2	min/ave/max  =	     0.34012	     0.76628	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.061985, Final residual = 7.3671e-10, No Iterations 6
+min/max(T) = 298.15, 755.23
+DICPCG:  Solving for p_rgh, Initial residual = 0.048222, Final residual = 0.00040533, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.1175e-05, global = -1.2792e-05, cumulative = -6.4084e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0049782, Final residual = 8.1257e-07, No Iterations 28
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2267e-07, global = 1.7842e-08, cumulative = -6.4066e-05
+smoothSolver:  Solving for k, Initial residual = 0.052522, Final residual = 3.7431e-09, No Iterations 5
+ExecutionTime = 5.34 s  ClockTime = 6 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 755.23 in cell 4209 at location (-0.1 1.1 -0.1)
+    min(Qdot) = 0 in cell 1672 at location (2.5 2.1 -1.3)
+    max(Qdot) = 1.7305e+06 in cell 4089 at location (-0.1 0.3 -0.1)
+
+Courant Number mean: 0.34088 max: 0.95312
+deltaT = 0.042955
+Time = 1.78523
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.025109, Final residual = 1.3451e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.013491, Final residual = 2.1824e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.020033, Final residual = 1.4384e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.035156, Final residual = 7.8539e-09, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.045255, Final residual = 5.0854e-10, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.019731, Final residual = 1.1178e-09, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.045252, Final residual = 5.0854e-10, No Iterations 5
+      O2	min/ave/max  =	    0.073331	      0.2323	     0.23301
+     H2O	min/ave/max  =	           0	  0.00020771	    0.035166
+    C3H8	min/ave/max  =	           0	  0.00088236	     0.54868
+     CO2	min/ave/max  =	           0	  0.00038058	    0.064432
+      N2	min/ave/max  =	     0.34191	     0.76623	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.045316, Final residual = 5.0844e-10, No Iterations 5
+min/max(T) = 298.15, 790.52
+DICPCG:  Solving for p_rgh, Initial residual = 0.042171, Final residual = 0.00040951, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.8942e-05, global = -8.5847e-06, cumulative = -7.265e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0027686, Final residual = 8.3589e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.3407e-08, global = 9.6873e-09, cumulative = -7.2641e-05
+smoothSolver:  Solving for k, Initial residual = 0.03281, Final residual = 3.07e-09, No Iterations 4
+ExecutionTime = 5.54 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 790.52 in cell 4209 at location (-0.1 1.1 -0.1)
+    min(Qdot) = 0 in cell 1252 at location (2.5 2.3 -1.5)
+    max(Qdot) = 2.0843e+06 in cell 4240 at location (0.1 1.3 -0.1)
+
+Courant Number mean: 0.23368 max: 0.63633
+deltaT = 0.042955
+Time = 1.82818
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.036467, Final residual = 2.7847e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.015927, Final residual = 2.9112e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.027184, Final residual = 2.4815e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.036351, Final residual = 7.4192e-10, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.04511, Final residual = 8.6091e-10, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.021408, Final residual = 6.8118e-10, No Iterations 5
+smoothSolver:  Solving for CO2, Initial residual = 0.045109, Final residual = 8.6092e-10, No Iterations 5
+      O2	min/ave/max  =	    0.073362	     0.23218	     0.23301
+     H2O	min/ave/max  =	           0	  0.00025326	    0.037864
+    C3H8	min/ave/max  =	           0	   0.0009333	     0.54435
+     CO2	min/ave/max  =	           0	  0.00046404	    0.069376
+      N2	min/ave/max  =	     0.34478	     0.76617	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.045223, Final residual = 8.6086e-10, No Iterations 5
+min/max(T) = 298.15, 824.2
+DICPCG:  Solving for p_rgh, Initial residual = 0.024311, Final residual = 0.00019096, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.1057e-05, global = -6.0274e-06, cumulative = -7.8668e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0022643, Final residual = 6.3841e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.4786e-08, global = 2.4496e-09, cumulative = -7.8666e-05
+smoothSolver:  Solving for k, Initial residual = 0.031362, Final residual = 3.1126e-09, No Iterations 4
+ExecutionTime = 5.73 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -2)
+    max(T) = 824.2 in cell 4211 at location (0.3 1.1 -0.1)
+    min(Qdot) = 0 in cell 1313 at location (2.7 2.7 -1.5)
+    max(Qdot) = 2.0715e+06 in cell 4059 at location (-0.1 0.1 -0.1)
+
+Courant Number mean: 0.24017 max: 0.70135
+deltaT = 0.042955
+Time = 1.87114
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034838, Final residual = 4.734e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.016853, Final residual = 4.8229e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.026811, Final residual = 3.5362e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.037897, Final residual = 1.3855e-09, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.045305, Final residual = 1.7739e-09, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.022855, Final residual = 5.2102e-10, No Iterations 5
+smoothSolver:  Solving for CO2, Initial residual = 0.045304, Final residual = 1.7739e-09, No Iterations 5
+      O2	min/ave/max  =	     0.07379	     0.23204	     0.23301
+     H2O	min/ave/max  =	           0	  0.00030787	    0.040394
+    C3H8	min/ave/max  =	           0	  0.00098138	     0.53806
+     CO2	min/ave/max  =	           0	  0.00056409	     0.07401
+      N2	min/ave/max  =	     0.34915	     0.76611	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.045344, Final residual = 1.7734e-09, No Iterations 5
+min/max(T) = 298.15, 876.06
+DICPCG:  Solving for p_rgh, Initial residual = 0.02439, Final residual = 0.00022012, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.5858e-05, global = -6.9534e-06, cumulative = -8.5619e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0025364, Final residual = 7.6907e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0107e-07, global = 3.1309e-09, cumulative = -8.5616e-05
+smoothSolver:  Solving for k, Initial residual = 0.02968, Final residual = 4.1469e-09, No Iterations 4
+ExecutionTime = 5.93 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 876.06 in cell 4211 at location (0.3 1.1 -0.1)
+    min(Qdot) = 0 in cell 174 at location (2.9 1.1 -1.9)
+    max(Qdot) = 2.2093e+06 in cell 4059 at location (-0.1 0.1 -0.1)
+
+Courant Number mean: 0.2472 max: 0.7703
+deltaT = 0.042955
+Time = 1.91409
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034988, Final residual = 8.6482e-07, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.018464, Final residual = 6.9771e-07, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.027677, Final residual = 5.7903e-07, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.039349, Final residual = 2.2826e-09, No Iterations 5
+smoothSolver:  Solving for H2O, Initial residual = 0.046205, Final residual = 2.7238e-09, No Iterations 5
+smoothSolver:  Solving for C3H8, Initial residual = 0.024271, Final residual = 2.2853e-09, No Iterations 5
+smoothSolver:  Solving for CO2, Initial residual = 0.046205, Final residual = 2.7239e-09, No Iterations 5
+      O2	min/ave/max  =	     0.07418	     0.23187	     0.23301
+     H2O	min/ave/max  =	           0	  0.00037463	    0.043182
+    C3H8	min/ave/max  =	           0	   0.0010312	      0.5314
+     CO2	min/ave/max  =	           0	  0.00068642	    0.079118
+      N2	min/ave/max  =	      0.3538	     0.76604	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.046246, Final residual = 2.7206e-09, No Iterations 5
+min/max(T) = 298.15, 924.04
+DICPCG:  Solving for p_rgh, Initial residual = 0.025363, Final residual = 0.00017996, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.362e-05, global = -5.468e-06, cumulative = -9.1084e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0025465, Final residual = 5.1474e-07, No Iterations 27
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.9056e-08, global = 1.3002e-09, cumulative = -9.1083e-05
+smoothSolver:  Solving for k, Initial residual = 0.028443, Final residual = 4.9172e-09, No Iterations 4
+ExecutionTime = 6.12 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 924.04 in cell 4241 at location (0.3 1.3 -0.1)
+    min(Qdot) = 0 in cell 8093 at location (2.7 2.9 1.5)
+    max(Qdot) = 2.3802e+06 in cell 4601 at location (0.3 0.7 0.1)
+
+Courant Number mean: 0.25504 max: 0.90596
+deltaT = 0.021477
+Time = 1.93557
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.018172, Final residual = 7.2507e-07, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0098336, Final residual = 4.6844e-07, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.014245, Final residual = 4.6465e-07, No Iterations 2
+smoothSolver:  Solving for O2, Initial residual = 0.020892, Final residual = 2.3922e-10, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.024215, Final residual = 2.7804e-10, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.012771, Final residual = 2.2753e-10, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.024215, Final residual = 2.7806e-10, No Iterations 4
+      O2	min/ave/max  =	    0.074224	     0.23176	     0.23301
+     H2O	min/ave/max  =	  2.3208e-71	  0.00041624	    0.045104
+    C3H8	min/ave/max  =	  1.8857e-71	   0.0010538	     0.52785
+     CO2	min/ave/max  =	  4.2521e-71	  0.00076265	    0.082639
+      N2	min/ave/max  =	     0.35626	       0.766	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.02424, Final residual = 2.7764e-10, No Iterations 4
+min/max(T) = 298.15, 949.31
+DICPCG:  Solving for p_rgh, Initial residual = 0.030031, Final residual = 0.00025451, No Iterations 20
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0302e-05, global = -1.9043e-06, cumulative = -9.2987e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.0012869, Final residual = 8.9204e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.2208e-08, global = 1.6942e-09, cumulative = -9.2985e-05
+smoothSolver:  Solving for k, Initial residual = 0.014235, Final residual = 2.2979e-09, No Iterations 3
+ExecutionTime = 6.3 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 949.31 in cell 4691 at location (0.3 1.3 0.1)
+    min(Qdot) = 0 in cell 1794 at location (2.9 2.9 -1.3)
+    max(Qdot) = 2.6196e+06 in cell 4151 at location (0.3 0.7 -0.1)
+
+Courant Number mean: 0.13021 max: 0.50609
+deltaT = 0.021477
+Time = 1.95705
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.026324, Final residual = 2.7008e-08, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.013012, Final residual = 4.959e-07, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.020536, Final residual = 7.7074e-07, No Iterations 2
+smoothSolver:  Solving for O2, Initial residual = 0.02107, Final residual = 2.3839e-10, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.024101, Final residual = 2.7439e-10, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.012664, Final residual = 2.9373e-10, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.024101, Final residual = 2.7442e-10, No Iterations 4
+      O2	min/ave/max  =	    0.073989	     0.23165	     0.23301
+     H2O	min/ave/max  =	  3.7359e-71	  0.00046223	    0.046914
+    C3H8	min/ave/max  =	  2.8802e-71	   0.0010776	     0.52501
+     CO2	min/ave/max  =	  6.8449e-71	   0.0008469	    0.085955
+      N2	min/ave/max  =	     0.35816	     0.76596	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.024184, Final residual = 2.7385e-10, No Iterations 4
+min/max(T) = 298.15, 968.8
+DICPCG:  Solving for p_rgh, Initial residual = 0.012091, Final residual = 0.0001163, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.7543e-06, global = -2.2416e-07, cumulative = -9.3209e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.00072796, Final residual = 7.2286e-07, No Iterations 24
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.6138e-08, global = -3.4507e-09, cumulative = -9.3213e-05
+smoothSolver:  Solving for k, Initial residual = 0.014348, Final residual = 3.7038e-09, No Iterations 3
+ExecutionTime = 6.49 s  ClockTime = 7 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -2)
+    max(T) = 968.8 in cell 4691 at location (0.3 1.3 0.1)
+    min(Qdot) = 1.0928e-63 in cell 3120 at location (-1.9 2.9 -0.7)
+    max(Qdot) = 2.6842e+06 in cell 4571 at location (0.3 0.5 0.1)
+
+Courant Number mean: 0.13304 max: 0.56294
+deltaT = 0.021477
+Time = 1.97852
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.026283, Final residual = 4.754e-08, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.01368, Final residual = 7.0188e-07, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.020228, Final residual = 9.8697e-07, No Iterations 2
+smoothSolver:  Solving for O2, Initial residual = 0.021159, Final residual = 2.1231e-10, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.023808, Final residual = 2.6747e-10, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.013553, Final residual = 5.0127e-10, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.02381, Final residual = 2.675e-10, No Iterations 4
+      O2	min/ave/max  =	    0.074048	     0.23152	     0.23301
+     H2O	min/ave/max  =	     6.1e-71	  0.00051271	    0.048336
+    C3H8	min/ave/max  =	  4.4307e-71	   0.0011016	     0.52085
+     CO2	min/ave/max  =	  1.1176e-70	  0.00093941	    0.088561
+      N2	min/ave/max  =	     0.36109	     0.76592	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.023839, Final residual = 2.668e-10, No Iterations 4
+min/max(T) = 298.15, 994.24
+DICPCG:  Solving for p_rgh, Initial residual = 0.0097492, Final residual = 8.5284e-05, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.4377e-06, global = -7.2512e-07, cumulative = -9.3938e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.00074142, Final residual = 9.2654e-07, No Iterations 24
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.3736e-08, global = 5.5158e-09, cumulative = -9.3933e-05
+smoothSolver:  Solving for k, Initial residual = 0.014537, Final residual = 5.8676e-09, No Iterations 3
+ExecutionTime = 6.68 s  ClockTime = 8 s
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 994.24 in cell 3791 at location (0.3 1.3 -0.3)
+    min(Qdot) = 1.6655e-63 in cell 3120 at location (-1.9 2.9 -0.7)
+    max(Qdot) = 2.858e+06 in cell 4571 at location (0.3 0.5 0.1)
+
+Courant Number mean: 0.13552 max: 0.60429
+deltaT = 0.021477
+Time = 2
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.021265, Final residual = 5.2369e-08, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.012704, Final residual = 8.5366e-07, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.017505, Final residual = 2.752e-08, No Iterations 3
+smoothSolver:  Solving for O2, Initial residual = 0.021264, Final residual = 3.3723e-10, No Iterations 4
+smoothSolver:  Solving for H2O, Initial residual = 0.023595, Final residual = 3.4091e-10, No Iterations 4
+smoothSolver:  Solving for C3H8, Initial residual = 0.014073, Final residual = 6.5856e-10, No Iterations 4
+smoothSolver:  Solving for CO2, Initial residual = 0.023598, Final residual = 3.4095e-10, No Iterations 4
+      O2	min/ave/max  =	    0.074282	     0.23139	     0.23301
+     H2O	min/ave/max  =	  1.0122e-70	  0.00056812	     0.05088
+    C3H8	min/ave/max  =	  6.8607e-71	   0.0011256	     0.51579
+     CO2	min/ave/max  =	  1.8546e-70	   0.0010409	    0.093223
+      N2	min/ave/max  =	     0.36469	     0.76588	       0.767
+Radiant Fraction is 0.36
+smoothSolver:  Solving for h, Initial residual = 0.023611, Final residual = 3.4015e-10, No Iterations 4
+min/max(T) = 298.15, 1027.3
+DICPCG:  Solving for p_rgh, Initial residual = 0.011149, Final residual = 8.9714e-05, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.2261e-06, global = -3.2602e-07, cumulative = -9.4259e-05
+DICPCG:  Solving for p_rgh, Initial residual = 0.00086079, Final residual = 8.7285e-07, No Iterations 25
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.775e-08, global = 3.3313e-09, cumulative = -9.4255e-05
+smoothSolver:  Solving for k, Initial residual = 0.014817, Final residual = 8.6092e-09, No Iterations 3
+ExecutionTime = 7.64 s  ClockTime = 9 s +
+
+fieldMinMax fieldMinMax write:
+    min(T) = 298.15 in cell 19 at location (1.9 0.1 -1.9)
+    max(T) = 1027.3 in cell 3791 at location (0.3 1.3 -0.3)
+    min(Qdot) = 2.5557e-63 in cell 3120 at location (-1.9 2.9 -0.7)
+    max(Qdot) = 3.2967e+06 in cell 4061 at location (0.3 0.1 -0.1)
+
+End
